@@ -2,9 +2,11 @@
 
 The problem that prompted me to write this: I am sick and tired of APIs that do not evolve and that have old warts that are not fixed. At the same time I hate APIs that make every update to multi hour 'joy-ride' of debugging and finding out why the heck my system doesn't work anymore.
 
-For this I think that 'Semantic Versioning' is just not enough, as an API provider you should adopt a dependable API evolution strategy that gives your users timely updates and new functionality, makes updating to a your newest version a breeze and a case for joy because of the new features instead of a reason for despair because of the amount of work it requires to 
+For this I think that 'Semantic Versioning' is just not enough.
 
-For your users it means that they can send you patches and actually hope that they will get the next version that includes them in a timely manner into their hand, getting new features regularly and will enjoy using your API so much more than any alternative because of it.
+As an API provider you should adopt a dependable API evolution strategy that gives your users timely updates and new functionality, makes updating to a your newest version a breeze and joy because of new features instead of a reason for despair because of the amount of work it requires.
+
+As an API user you should demand this so that you can send you patches and actually hope that they will get into the next version in a timely manner while it is not a burden to update to new revisions. And then there is the small part of actually enjoying an API that works and is extended in a good and healthy way.
 
 Consider libraries like jQuery or Apples Cocoa where it is pretty much a no brainer to update to the newest version immediately. At the same time, they stay current and adapt and absorb new emerging patterns in a timely manner while fixing old warts and making the framework more and more consistent all the time. (Ok, some warts are not fixeable, but at they try very hard)
 
@@ -12,8 +14,8 @@ I think it is Common Sense to do <<Dependable API Evolution>>, but for some reas
 
 ## Problems
 
-- API's change names / types / behavior from version to version
-- API's removed from version to version
+- API's suddenly change names / types / behavior from version to version
+- API's removed from version to version without a warning period
 - Bugs/ Inconsistencies in APIs are not fixed
 - New and improved patterns or api designs are not adapted in a timely matter
 
@@ -27,9 +29,9 @@ Extremes to avoid:
 
 * The 'Thousands of Patches Flying in Close Formation Syndrome': Different parts of the API have very different fluency to it and don't match very well. Symptoms: Knowing one part of the API doesn't make it any easier to guess the names and workings of other parts of your API. Documentation cannot be consolidated by talking about the patterns adopted by your framework, but instead is separated from each other and also very needed because you need to look at it for every module anew.
 
-* The 'DOM API Syndrome': Different implementations / versions of your API are so inconsistent that it is almost impossible for users to consume all of them. Symptoms: There are adapter packages around to wrap your API and make it easier for users to actually use them and allow them to target different versions of that API that are in use in the wild.
+* The 'DOM API Syndrome': Different implementations / versions of your API are so inconsistent that it is almost impossible for users to consume all of them. Symptoms: There are adapter packages around to wrap your API and make it easier for users to actually use them and allow them to target different versions of that API that are in use in the wild. Consider the success of jQuery that does nothing that hiding the DOM-APIs behind something sane and manageable.
 
-* The 'Ruby Debugger Syndrome': Different versions of your API change so much that consumers are unable to evolve an API that builds on it. Symptoms: Different versions of your API have different incompatible packages that implement the same functionality in an incompatible way. Backwards compatibility is virtually impossible.
+* The 'Ruby Debugger Syndrome': Different versions of your API change so much that consumers are unable to evolve an API that builds on it. Symptoms: Different versions of your API have different incompatible packages that implement the same functionality in an incompatible way. Backwards compatibility is virtually impossible. Consider the different Ruby-Debugger gems that have sprung up for the various versions of the interpreter. 'ruby-debug' for Ruby 1.8, 'ruby-debugger19' and later 'debugger' for Ruby 1.9, 'byebug' for Ruby 2.0 and it seems Ruby 2.1, already needs another different debugger package. Maybe it is 'pry' now...
 
 (not sure this is not something that should be included above)
 
