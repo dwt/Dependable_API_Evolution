@@ -1,6 +1,6 @@
 # Dependable API Evolution
 
-The problem that prompted me to write this: I am sick and tired of APIs that do not evolve and that have old warts that are not fixed. At the same time I hate APIs that make every update to multi hour 'joy-ride' of debugging and finding out why the heck my system doesn't work anymore.
+The problem that prompted me to write this: I am sick and tired of APIs that do not evolve and that have old warts that are not fixed. At the same time I hate APIs that make every update a multi hour 'joy-ride' of debugging and finding out why the heck my system doesn't work anymore.
 
 For this I think that 'Semantic Versioning' is just not enough.
 
@@ -8,7 +8,7 @@ As an API provider you should adopt a dependable API evolution strategy that giv
 
 As an API user you should demand this so that you can send you patches and actually hope that they will get into the next version in a timely manner while it is not a burden to update to new revisions. And then there is the small part of actually enjoying an API that works and is extended in a good and healthy way.
 
-Consider libraries like jQuery or Apples Cocoa where it is pretty much a no brainer to update to the newest version immediately. At the same time, they stay current and adapt and absorb new emerging patterns in a timely manner while fixing old warts and making the framework more and more consistent all the time. (Ok, some warts are not fixeable, but at they try very hard)
+Consider libraries like jQuery or Apples Cocoa where it is pretty much a no brainer to update to the newest version immediately. At the same time, they stay current and adapt and absorb new emerging patterns in a timely manner while fixing old warts and making the framework more and more consistent all the time. (Ok, some warts are not fixeable, but at least they try very hard)
 
 I think it is Common Sense to do <<Dependable API Evolution>>, but for some reason it hasen't yet cought on as common knowledge and there is no easy way to refer anyone to a document that explains it. So here we go.
 
@@ -25,7 +25,7 @@ Extremes to avoid:
 
 * The 'Python Standard Library Syndrome': Your Library is so 'stable' that a module has to be dead/ unmaintained for 3-5 years before you consider adding it to your library. Some symptoms: API changes rarely, many of the non core modules have alternatives in the wild that have a vastly more fluent / short / powerfull / consistent / modern API. Consider the python standard library. Almost no development happens in there, many of it's modules are 10 and more years old with only the most required bugfixes.
 
-* The 'Python 3k Syndrome': Your users stick with an old version of your API and are very reluctant to update. Symptoms: You are forced to release new versions of it instead focussing your engineering on the newest version. You add Interims Versions, i.e evolutions of the old API version to make it easier for your users to switch to the newest version. You release new versions of your new API that add in old features again to make it easier for your users to upgrade. Consider the introduction of Python 3.0. Nobody used it. Three major revisions where required (3.0, 3.1, 3.2) before the community is actually considering it's adoption.
+* The 'Python 3k Syndrome': Your users stick with an old version of your API and are very reluctant to update. Symptoms: You are forced to release new versions of it instead focussing your engineering on the newest version. You add Interims Versions, i.e evolutions of the old API version to make it easier for your users to switch to the newest version. You release new versions of your new API that add in old features again to make it easier for your users to upgrade. Consider the introduction of Python 3.0. Nobody used it. Three major revisions where required (3.0, 3.1, 3.2) before the community is actually considering it's adoption. Today, 3.4 is still not a no brainer to switch to.
 
 * The 'Thousands of Patches Flying in Close Formation Syndrome': Different parts of the API have very different fluency to it and don't match very well. Symptoms: Knowing one part of the API doesn't make it any easier to guess the names and workings of other parts of your API. Documentation cannot be consolidated by talking about the patterns adopted by your framework, but instead is separated from each other and also very needed because you need to look at it for every module anew.
 
