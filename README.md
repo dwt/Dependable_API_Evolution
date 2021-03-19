@@ -1,4 +1,4 @@
-# My Suggestion: Define Dependable API Evolution
+# Dependable API Evolution
 
 The problem that prompted me to write this: I am sick and tired of APIs that do not evolve and that have old warts that are not fixed. At the same time I hate APIs that make every update to multi hour 'joy-ride' of debugging and finding out why the heck my system doesn't work anymore.
 
